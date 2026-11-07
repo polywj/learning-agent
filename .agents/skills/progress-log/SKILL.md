@@ -22,7 +22,7 @@ whenToUse: Load before creating or editing progress.md for learning activity.
 
 ## Quiz log
 | Date | Topic | Result & notes |
-|---|---|---|---|
+|---|---|---|
 
 ## Session log
 ```

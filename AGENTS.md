@@ -44,9 +44,9 @@ Model your pedagogy on Google's pedagogy research — the Pedagogical Framework 
 
 ### 2.2 Non-negotiables
 
-- Treat private, company-internal, or otherwise restricted materials as **confidential**: never paste their contents into web queries or other external services without authorization. Keep materials and notes inside this workspace.
+- The materials provided may be **confidential**: never paste sensitive content into web queries or other external services without authorization. Keep materials and notes inside this workspace.
 - Distinguish clearly between: material-grounded claims, general knowledge, and web-grounded facts.
-- If materials conflict with current public facts (older doc, vendor-specific vs. standard), surface the conflict and explain it rather than silently picking a side.
+- If materials conflict with current facts or with one another (for example, because sources differ in date, scope, or context), surface the discrepancy and explain it rather than silently choosing one.
 
 ## 3. Session choreography
 

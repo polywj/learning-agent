@@ -4,29 +4,24 @@ English | [中文](README.zh.md)
 
 A tutoring workspace for learning a subject of your choice. Add study materials
 (PDF, PPTX, and more) to `materials/` for the AI tutor to explain and quiz you
-on, or ask about a topic directly. An optional learner-approved study plan and
-your progress are tracked in `progress.md`.
+on, or ask about a topic directly. Progress is tracked in `progress.md`.
 
 - **This file** — how to set up and use the workspace (for you, the learner).
 - **`AGENTS.md`** — the agent's rulebook: tutoring style, session choreography,
   and environment notes.
 
-You can start with a one-off question, quiz, or material ingestion; setting up a
-learner profile and ongoing curriculum is optional. You can also adjust the
+You can start with a one-off question, quiz, or material ingestion, and set up a
+learner profile and curriculum whenever you like. You can also adjust the
 tutoring behavior in `AGENTS.md`.
-
-## License
-
-This project is licensed under the GNU Affero General Public License v3.0
-(AGPL-3.0). See [LICENSE](LICENSE).
 
 ## Prerequisites
 
 | Requirement | Why |
 |---|---|
-| **DSH (DeepSeek Harness)** — `npx @deepseek-ai/dsh web`; it launches the GUI in your web browser automatically. | Runs the agent and the web interface. |
+| **Node.js** (includes `npx`) | Runs the DSH launch command. |
+| **DeepSeek Harness (DSH)** — `npx @deepseek-ai/dsh web`; it launches the GUI in your web browser automatically. | Runs the agent and the web interface. |
 | **Python 3.10 – 3.14** | MarkItDown (the document-to-Markdown converter) requires `>=3.10, <3.15`. This workspace's venv uses 3.14. |
-| **PowerPoint** (desktop, Windows; only for PPTX/PPT ingestion) | Renders presentation slides to images during ingest. |
+| **PowerPoint** (desktop, Windows; only for PPT/PPTX ingestion) | Renders presentation slides to images during ingest. |
 
 ## Setup
 
@@ -59,17 +54,15 @@ Tested with: Python 3.14, markitdown 0.1.9, PyMuPDF 2.0, comtypes 1.4.17.
 
 Start with whichever is useful:
 
-- **Ask or learn:** *"Explain [topic]"* or *"Help me understand this concept."*
+- **Ask or learn:** *"Teach me [topic]"*
 - **Quiz:** *"Quiz me on [topic]."*
 - **Ingest:** Drop a file into `materials/` and tell the agent *"ingest
-  <file>"*. It converts the document to Markdown with page/slide images under
-  `materials/md/`, analyzes the images when an image-capable model is available,
-  and gives you an orientation summary. You can do this before setting up a
-  study plan.
+  <file>"*. It converts the document to Markdown under `materials/md/`; PDF and
+  PowerPoint files also get page/slide images. The agent analyzes generated
+  images when an image-capable model is available and gives you an orientation
+  summary.
 
-Ingestion and quizzes create `progress.md` as needed to record the material or
-quiz result. These one-off activities do not fill in your learner profile,
-goals, or curriculum. For a personalized, ongoing plan, ask the agent to help set one up.
+For a personalized, ongoing plan, ask the agent to help set one up.
 It will briefly ask about your subject, goals, experience, and preferences,
 then propose a manageable curriculum. Once you agree, it adds your profile,
 goals, and curriculum to `progress.md`. You can also set up a plan after
@@ -102,3 +95,8 @@ AGENTS.md           # agent rulebook
 README.md           # this file
 README.zh.md        # this file in Chinese (中文版)
 ```
+
+## License
+
+This project is licensed under the GNU Affero General Public License v3.0
+(AGPL-3.0). See [LICENSE](LICENSE).
