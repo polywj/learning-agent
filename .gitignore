@@ -1,0 +1,5 @@
+# Learner-specific progress
+/progress.md
+
+# Python virtualenv (also self-ignored via the .gitignore that python -m venv writes inside it)
+.venv/
