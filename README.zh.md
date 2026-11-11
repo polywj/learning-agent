@@ -29,7 +29,7 @@
 
 - **导师模型（tutor model）** —— 你的主 AI 助教；
 - **子代理模型（subagent models）** —— 助教可以委派任务的路由（它会自动
-  发现这些路由，图像分析默认使用 `glm-5.3-flash`；详见 `ingest` 技能）。
+  发现这些路由，图像分析默认使用 `deepseek-flash`；详见 `ingest` 技能）。
 
 负责读取页面/幻灯片图片的模型，务必在其 **Input types**（输入类型）中
 勾选 **Image**（图像，与 Text 并列）。否则图像分析会报错

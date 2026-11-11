@@ -31,7 +31,7 @@ Under **Models** in the GUI settings, declare:
 
 - the **tutor model** — your main agent;
 - **subagent models** — routes the agent can delegate to (it discovers them
-  automatically and defaults to `glm-5.3-flash` for image analysis; see the
+  automatically and defaults to `deepseek-flash` for image analysis; see the
   `ingest` skill).
 
 For the model that will read page/slide images, make sure **Image** is checked
