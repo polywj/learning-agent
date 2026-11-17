@@ -71,16 +71,21 @@ def com_export(src: str, pdf_dst: str, pptx_dst: str):
         ver = str(app.Version)
         # Open(FileName, ReadOnly=msoTrue, Untitled=msoFalse, WithWindow=msoFalse);
         # retry with a visible window for builds that refuse windowless opens.
+        automation_security = app.AutomationSecurity
         try:
-            pres = app.Presentations.Open(src, True, False, False)
-        except Exception as e_first:
+            app.AutomationSecurity = 3  # msoAutomationSecurityForceDisable
             try:
-                pres = app.Presentations.Open(src, True, False, True)
-            except Exception as e_retry:
-                return None, (
-                    f"Presentations.Open failed — windowless: {type(e_first).__name__}: {e_first}; "
-                    f"with-window retry: {type(e_retry).__name__}: {e_retry}"
-                )
+                pres = app.Presentations.Open(src, True, False, False)
+            except Exception as e_first:
+                try:
+                    pres = app.Presentations.Open(src, True, False, True)
+                except Exception as e_retry:
+                    return None, (
+                        f"Presentations.Open failed — windowless: {type(e_first).__name__}: {e_first}; "
+                        f"with-window retry: {type(e_retry).__name__}: {e_retry}"
+                    )
+        finally:
+            app.AutomationSecurity = automation_security
         if pptx_dst:
             pres.SaveAs(pptx_dst, 24)  # 24 = ppSaveAsOpenXMLPresentation
         from ctypes import POINTER

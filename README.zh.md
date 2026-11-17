@@ -19,7 +19,8 @@
 | **Node.js**（包含 `npx`） | 运行 DSH 启动命令。 |
 | **DeepSeek Harness (DSH)** —— `npx @deepseek-ai/dsh web`，它会自动在浏览器中打开网页 GUI。 | 运行 AI 助教和网页界面。 |
 | **Python 3.10 – 3.14** | MarkItDown（文档转 Markdown 工具）要求 `>=3.10, <3.15`。本工作区的 venv 使用 3.14。 |
-| **PowerPoint**（Windows 桌面版；仅导入 PPTX/PPT 时需要） | 导入演示文稿时将幻灯片渲染成图片。 |
+| **PowerPoint**（Windows 桌面版，可选） | 仅导入 PPTX/PPT 时需要：把幻灯片渲染成图片。 |
+| **Word**（Windows 桌面版，可选） | 仅导入 DOCX/DOC 时需要：把页面渲染成图片。 |
 
 ## 搭建步骤
 

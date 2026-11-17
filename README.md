@@ -21,7 +21,8 @@ tutoring behavior in `AGENTS.md`.
 | **Node.js** (includes `npx`) | Runs the DSH launch command. |
 | **DeepSeek Harness (DSH)** — `npx @deepseek-ai/dsh web`; it launches the GUI in your web browser automatically. | Runs the agent and the web interface. |
 | **Python 3.10 – 3.14** | MarkItDown (the document-to-Markdown converter) requires `>=3.10, <3.15`. This workspace's venv uses 3.14. |
-| **PowerPoint** (desktop, Windows; only for PPT/PPTX ingestion) | Renders presentation slides to images during ingest. |
+| **PowerPoint** (desktop, Windows) — *optional* | Only for ingesting PPTX/PPT: renders slides to images. |
+| **Word** (desktop, Windows) — *optional* | Only for ingesting DOCX/DOC: renders pages to images. |
 
 ## Setup
 
