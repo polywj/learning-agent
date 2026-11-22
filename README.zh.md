@@ -46,7 +46,7 @@ python -m venv .venv
 & .venv\Scripts\python.exe -m pip install "markitdown[all]" pymupdf comtypes
 ```
 
-已验证版本：Python 3.14、markitdown 0.1.9、PyMuPDF 2.0、comtypes 1.4.17。
+已验证版本：Python 3.14、markitdown 0.1.9、PyMuPDF 2.1、comtypes 1.5.0。
 
 ## 快速上手
 
@@ -55,8 +55,8 @@ python -m venv .venv
 - **提问或学习：** *"教我 [主题]"*。
 - **测验：** *"考考我 [主题]"*。
 - **导入资料：** 把文件放进 `materials/`，对助教说 *"导入 <文件名>"*。
-  助教会将文档转换为 Markdown 并保存到 `materials/md/`；PDF 和
-  PowerPoint 文件还会附带页面/幻灯片图片。如果有支持图像输入的模型，
+  助教会将文档转换为 Markdown 并保存到 `materials/md/`；PDF、PowerPoint
+  和 Word 文件还会附带页面/幻灯片图片。如果有支持图像输入的模型，
   助教会分析生成的图片；此外还会提供内容概览。无需先建立学习计划。
 
 如果你想制定个性化的长期计划，可以请助教帮你设置。助教会简要询问你的
@@ -70,11 +70,11 @@ python -m venv .venv
 |---|---|
 | **给我讲 X** | 结构化讲解，穿插理解检查；结尾做一次复述检验（explain-back）。 |
 | **考考我** | 针对你指定的主题或已导入资料测验；如果已有确认的课程计划，也会据此调整。遵循 `quiz-me` 技能。 |
-| **深入探讨** | 深入讨论进阶主题、权衡、设计决策或失败案例。 |
 | **复习** | 回顾 `progress.md`，重访薄弱点，对旧主题做间隔重复。 |
 | **导入资料** | 转换并索引新的培训材料——即 `ingest` 技能——随后给出简短的内容概览。 |
 | **演示 X / 给我看 X** | 在 `demos/` 中生成概念 X 的可交互单文件 HTML 演示：实时仿真、可切换开关、数值取自材料。遵循 `demonstrate` 技能。 |
-| **自由问答** | 随问随答；`AGENTS.md` 中的辅导原则同样适用。 |
+| **图解 X / 画图** | 在 `illustrations/` 中生成静态 SVG 插图，帮助理解概念。遵循 `illustrate` 技能。 |
+| **自由探索** | 随时提问，或深入探讨某个主题、权衡、设计决策或失败案例；`AGENTS.md` 中的辅导原则同样适用。 |
 
 不确定该用哪个模式时，直接说出你的需求即可——助教会帮你选。
 
@@ -85,6 +85,7 @@ materials/          # 原始培训资料，按放入时的样子保存（PDF、P
 materials/md/       # Markdown 转换结果，文件名与源文件一致（另有 <name>_media/ 页面图片）
 notes/              # 学习小结与概念笔记
 demos/              # 按需生成的单文件可交互 HTML 演示（见 demonstrate 技能）
+illustrations/      # 生成的 SVG 插图（见 illustrate 技能）
 tools/              # 转换与工作区工具脚本（用 .venv 运行；说明见 AGENTS.md）
 .venv/              # 工作区 Python 虚拟环境
 .agents/            # 工作区技能，AI 助教按需加载

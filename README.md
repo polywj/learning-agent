@@ -49,7 +49,7 @@ python -m venv .venv
 & .venv\Scripts\python.exe -m pip install "markitdown[all]" pymupdf comtypes
 ```
 
-Tested with: Python 3.14, markitdown 0.1.9, PyMuPDF 2.0, comtypes 1.4.17.
+Tested with: Python 3.14, markitdown 0.1.9, PyMuPDF 2.1, comtypes 1.5.0.
 
 ## Quick start
 
@@ -58,10 +58,10 @@ Start with whichever is useful:
 - **Ask or learn:** *"Teach me [topic]"*
 - **Quiz:** *"Quiz me on [topic]."*
 - **Ingest:** Drop a file into `materials/` and tell the agent *"ingest
-  <file>"*. It converts the document to Markdown under `materials/md/`; PDF and
-  PowerPoint files also get page/slide images. The agent analyzes generated
-  images when an image-capable model is available and gives you an orientation
-  summary.
+  <file>"*. It converts the document to Markdown under `materials/md/`; PDF,
+  PowerPoint, and Word files also get rendered page/slide images. The agent
+  analyzes generated images when an image-capable model is available and gives
+  you an orientation summary.
 
 For a personalized, ongoing plan, ask the agent to help set one up.
 It will briefly ask about your subject, goals, experience, and preferences,
@@ -75,11 +75,11 @@ ingesting materials or taking a quiz.
 |---|---|
 | **Teach me X** | Structured explanation with comprehension checks woven in; end with an explain-back. |
 | **Quiz me** | Test understanding on the requested topic or ingested materials; when available, adapt to your agreed curriculum. Follows the `quiz-me` skill. |
-| **Deep dive** | Explore an advanced topic, trade-off, design decision, or failure case. |
 | **Review** | Recap `progress.md`, revisit weak spots, spaced repetition of older topics. |
 | **Ingest** | Convert and index new training materials — the `ingest` skill — then offer a short orientation summary of what they cover. |
 | **Demonstrate / Show me X** | Build an interactive single-file HTML demo of concept X in `demos/`, with live simulation and material-grounded numbers. Follows the `demonstrate` skill. |
-| **Free chat** | Ad-hoc Q&A; the tutoring principles in `AGENTS.md` still apply. |
+| **Illustrate X / Draw a diagram** | Create a static SVG illustration in `illustrations/` to clarify a concept. Follows the `illustrate` skill. |
+| **Free explore** | Ask questions or dive deeper into a topic, trade-off, design decision, or failure case; the tutoring principles in `AGENTS.md` still apply. |
 
 If the mode is unclear, just say what you want — the agent will suggest one.
 
@@ -90,6 +90,7 @@ materials/          # original training files as dropped (PDF, PPTX, DOCX, ...) 
 materials/md/       # Markdown conversions, mirroring source filenames (+ <name>_media/ page images)
 notes/              # session summaries and concept notes
 demos/              # interactive single-file HTML demos generated on request (see the `demonstrate` skill)
+illustrations/      # generated SVG illustrations (see the `illustrate` skill)
 tools/              # conversion & workspace utility scripts (run with the .venv; see AGENTS.md)
 .venv/              # workspace Python virtualenv
 .agents/            # workspace skills the agent loads on demand
