@@ -78,6 +78,7 @@ ingesting materials or taking a quiz.
 | **Deep dive** | Explore an advanced topic, trade-off, design decision, or failure case. |
 | **Review** | Recap `progress.md`, revisit weak spots, spaced repetition of older topics. |
 | **Ingest** | Convert and index new training materials — the `ingest` skill — then offer a short orientation summary of what they cover. |
+| **Demonstrate / Show me X** | Build an interactive single-file HTML demo of concept X in `demos/`, with live simulation and material-grounded numbers. Follows the `demonstrate` skill. |
 | **Free chat** | Ad-hoc Q&A; the tutoring principles in `AGENTS.md` still apply. |
 
 If the mode is unclear, just say what you want — the agent will suggest one.
@@ -88,6 +89,7 @@ If the mode is unclear, just say what you want — the agent will suggest one.
 materials/          # original training files as dropped (PDF, PPTX, DOCX, ...) — read-only, never modify
 materials/md/       # Markdown conversions, mirroring source filenames (+ <name>_media/ page images)
 notes/              # session summaries and concept notes
+demos/              # interactive single-file HTML demos generated on request (see the `demonstrate` skill)
 tools/              # conversion & workspace utility scripts (run with the .venv; see AGENTS.md)
 .venv/              # workspace Python virtualenv
 .agents/            # workspace skills the agent loads on demand

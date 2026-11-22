@@ -73,6 +73,7 @@ python -m venv .venv
 | **深入探讨** | 深入讨论进阶主题、权衡、设计决策或失败案例。 |
 | **复习** | 回顾 `progress.md`，重访薄弱点，对旧主题做间隔重复。 |
 | **导入资料** | 转换并索引新的培训材料——即 `ingest` 技能——随后给出简短的内容概览。 |
+| **演示 X / 给我看 X** | 在 `demos/` 中生成概念 X 的可交互单文件 HTML 演示：实时仿真、可切换开关、数值取自材料。遵循 `demonstrate` 技能。 |
 | **自由问答** | 随问随答；`AGENTS.md` 中的辅导原则同样适用。 |
 
 不确定该用哪个模式时，直接说出你的需求即可——助教会帮你选。
@@ -83,6 +84,7 @@ python -m venv .venv
 materials/          # 原始培训资料，按放入时的样子保存（PDF、PPTX、DOCX 等）——只读，永不修改
 materials/md/       # Markdown 转换结果，文件名与源文件一致（另有 <name>_media/ 页面图片）
 notes/              # 学习小结与概念笔记
+demos/              # 按需生成的单文件可交互 HTML 演示（见 demonstrate 技能）
 tools/              # 转换与工作区工具脚本（用 .venv 运行；说明见 AGENTS.md）
 .venv/              # 工作区 Python 虚拟环境
 .agents/            # 工作区技能，AI 助教按需加载
