@@ -1,7 +1,7 @@
 ---
 name: demonstrate
 description: Build an interactive single-file HTML demo in demos/ that illustrates a concept with live simulation, concept toggles, and material-grounded numbers.
-whenToUse: Load when the learner asks to see a concept demonstrated or visualized (e.g. "show me X", "demonstrate X", "演示 X", "给我看 X").
+whenToUse: Load when the learner asks to see a concept demonstrated or simulated (e.g. "show me X", "demonstrate X", "演示 X", "给我看 X").
 ---
 
 # Demonstrate

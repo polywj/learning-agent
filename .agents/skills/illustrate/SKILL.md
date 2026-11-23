@@ -1,7 +1,7 @@
 ---
 name: illustrate
-description: Create a static SVG illustration to explain a concept. Use for "illustrate", "draw a diagram", "画图" or "图解", or when a diagram would help a tutoring explanation.
-whenToUse: Load when the learner requests a static illustration or a tutoring explanation needs one; use demonstrate instead for an interactive simulation.
+description: Create a static SVG illustration to explain a concept. Use for "illustrate", "draw a diagram", "画图" or "图解说明", or when a diagram would help a tutoring explanation.
+whenToUse: Load when the learner requests a static illustration or a tutoring explanation needs one.
 ---
 
 # Illustrate

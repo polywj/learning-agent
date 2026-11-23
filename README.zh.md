@@ -18,9 +18,9 @@
 |---|---|
 | **Node.js**（包含 `npx`） | 运行 DSH 启动命令。 |
 | **DeepSeek Harness (DSH)** —— `npx @deepseek-ai/dsh web`，它会自动在浏览器中打开网页 GUI。 | 运行 AI 助教和网页界面。 |
-| **Python 3.10 – 3.14** | MarkItDown（文档转 Markdown 工具）要求 `>=3.10, <3.15`。本工作区的 venv 使用 3.14。 |
-| **PowerPoint**（Windows 桌面版，可选） | 仅导入 PPTX/PPT 时需要：把幻灯片渲染成图片。 |
-| **Word**（Windows 桌面版，可选） | 仅导入 DOCX/DOC 时需要：把页面渲染成图片。 |
+| **Python 3.10 – 3.14** | MarkItDown（文档转 Markdown 工具）要求 `>=3.10, <3.15`。 |
+| **PowerPoint**（Windows 桌面版，可选） | 仅导入 PPT/PPTX 时需要：把幻灯片渲染成图片。 |
+| **Word**（Windows 桌面版，可选） | 仅导入 DOC/DOCX 时需要：把页面渲染成图片。 |
 
 ## 搭建步骤
 
@@ -72,8 +72,8 @@ python -m venv .venv
 | **考考我** | 针对你指定的主题或已导入资料测验；如果已有确认的课程计划，也会据此调整。遵循 `quiz-me` 技能。 |
 | **复习** | 回顾 `progress.md`，重访薄弱点，对旧主题做间隔重复。 |
 | **导入资料** | 转换并索引新的培训材料——即 `ingest` 技能——随后给出简短的内容概览。 |
+| **图解说明 X / 画图** | 在 `illustrations/` 中生成静态 SVG 插图，帮助理解概念。遵循 `illustrate` 技能。 |
 | **演示 X / 给我看 X** | 在 `demos/` 中生成概念 X 的可交互单文件 HTML 演示：实时仿真、可切换开关、数值取自材料。遵循 `demonstrate` 技能。 |
-| **图解 X / 画图** | 在 `illustrations/` 中生成静态 SVG 插图，帮助理解概念。遵循 `illustrate` 技能。 |
 | **自由探索** | 随时提问，或深入探讨某个主题、权衡、设计决策或失败案例；`AGENTS.md` 中的辅导原则同样适用。 |
 
 不确定该用哪个模式时，直接说出你的需求即可——助教会帮你选。

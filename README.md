@@ -20,9 +20,9 @@ tutoring behavior in `AGENTS.md`.
 |---|---|
 | **Node.js** (includes `npx`) | Runs the DSH launch command. |
 | **DeepSeek Harness (DSH)** — `npx @deepseek-ai/dsh web`; it launches the GUI in your web browser automatically. | Runs the agent and the web interface. |
-| **Python 3.10 – 3.14** | MarkItDown (the document-to-Markdown converter) requires `>=3.10, <3.15`. This workspace's venv uses 3.14. |
-| **PowerPoint** (desktop, Windows) — *optional* | Only for ingesting PPTX/PPT: renders slides to images. |
-| **Word** (desktop, Windows) — *optional* | Only for ingesting DOCX/DOC: renders pages to images. |
+| **Python 3.10 – 3.14** | MarkItDown (the document-to-Markdown converter) requires `>=3.10, <3.15`. |
+| **PowerPoint** (desktop, Windows) — *optional* | Only for ingesting PPT/PPTX: renders slides to images. |
+| **Word** (desktop, Windows) — *optional* | Only for ingesting DOC/DOCX: renders pages to images. |
 
 ## Setup
 
@@ -77,8 +77,8 @@ ingesting materials or taking a quiz.
 | **Quiz me** | Test understanding on the requested topic or ingested materials; when available, adapt to your agreed curriculum. Follows the `quiz-me` skill. |
 | **Review** | Recap `progress.md`, revisit weak spots, spaced repetition of older topics. |
 | **Ingest** | Convert and index new training materials — the `ingest` skill — then offer a short orientation summary of what they cover. |
-| **Demonstrate / Show me X** | Build an interactive single-file HTML demo of concept X in `demos/`, with live simulation and material-grounded numbers. Follows the `demonstrate` skill. |
 | **Illustrate X / Draw a diagram** | Create a static SVG illustration in `illustrations/` to clarify a concept. Follows the `illustrate` skill. |
+| **Demonstrate / Show me X** | Build an interactive single-file HTML demo of concept X in `demos/`, with live simulation and material-grounded numbers. Follows the `demonstrate` skill. |
 | **Free explore** | Ask questions or dive deeper into a topic, trade-off, design decision, or failure case; the tutoring principles in `AGENTS.md` still apply. |
 
 If the mode is unclear, just say what you want — the agent will suggest one.
